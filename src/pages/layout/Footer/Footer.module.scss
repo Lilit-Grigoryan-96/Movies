@@ -1,0 +1,10 @@
+@import "../../../themes/vars";
+
+footer{
+  background-color: $DarkBlue;
+  padding: 50px 0;
+  .footer_logo{
+    max-width: 130px;
+    height: auto;
+  }
+}

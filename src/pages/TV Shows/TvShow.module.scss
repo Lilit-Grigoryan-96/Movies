@@ -1,0 +1,50 @@
+.movie_info_sec{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(7.84%, 9.80%, 9.02%, 1.00) 150px, rgba(7.84%, 9.80%, 9.02%, 0.84) 100%);
+
+  }
+  .column{
+    z-index: 50;
+    color: #ffffff;
+    padding: 20px;
+    h1, h2, h3, span{
+      color: #ffffff;
+    }
+    .icons{
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      span[role="img"]{
+        background: rgba(3,37,65, 1);
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        cursor: pointer;
+
+    }
+
+  }
+
+  }
+
+}
+.people_card{
+  img{
+    min-height: 225px;
+  }
+}

@@ -1,0 +1,51 @@
+@import "themes/vars";
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+section{
+    margin: 30px 0;
+}
+h3{
+    font-size: 15px;
+}
+.tabs{
+    .ant-tabs-nav-list{
+        border: 1px solid $DarkBlue;
+        border-radius: 30px;
+        .ant-tabs-tab{
+            padding: 0;
+            margin: 0;
+            .ant-tabs-tab-btn{
+                padding: 4px 20px;
+                color: $DarkBlue;
+                font-weight: bold;
+            }
+        }
+        .ant-tabs-tab-active{
+            .ant-tabs-tab-btn{
+                background-color: $DarkBlue;
+                color: $Green;
+                border-radius: 30px;
+            }
+        }
+    }
+    .ant-tabs-ink-bar{
+        display: none;
+    }
+}
+
+.d-flex{
+    display: flex !important;
+}
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+}
+.ant-progress-inner{
+    width: 90px !important;
+    height: 90px !important;
+}

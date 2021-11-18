@@ -1,0 +1,40 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px;
+}
+.movies_sec {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+
+  .card {
+    min-width: 150px;
+    margin-left: 20px;
+  }
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #dbdbdb;
+  }
+}
+.movie_info_sec {
+  padding: 100px;
+  .column {
+    padding: 20px;
+  }
+}
+.movies_row {
+  margin: 50px 0;
+}
