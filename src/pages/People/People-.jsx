@@ -1,7 +1,7 @@
 import React from 'react'
 import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
-import {Col, Row, Pagination} from "antd";
+import {Col, Row} from "antd";
 import "../page.scss";
 import Page from "../layout/Page";
 import Card from "../../components/Card";
@@ -9,25 +9,22 @@ import personImg from "../../assets/images/person.svg"
 import {people} from "../index"
 import PaginationRow from "./PaginationRow";
 import classes from "./People.module.scss"
-import useData from "../../hooks/useData";
 
 
 const People = () => {
-    
-
+    const [contents, setContent] = useState([]);
     const [currentPage, setPage] = useState(1);
-    let data = useData(people, currentPage);
 
-    
+    useEffect(() => {
+        people(currentPage).then(response => setContent(response));
+    });
+//
     return (
-        
         <Page>
-
             <Row justify="space-around" className="movies_conrainer movies ">
 
                     {
-                       
-                        data && data.map((el, index) => {
+                        contents && contents.map((el, index) => {
                                 return (
                                     <Col md={5} key={el + '_' + index} className={classes.card}>
                                         <div>
@@ -45,9 +42,7 @@ const People = () => {
                     }
 
             </Row>
-
             <PaginationRow currentPage={currentPage} setPage={setPage}/>
-        
         </Page>
     )
 };

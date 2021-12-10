@@ -58,7 +58,7 @@ const MoviesSection = ({title, arr, video}) => {
                                         }
                                         else{
                                             return (
-                                                <div className={classes.video_card}>
+                                                <div className={classes.video_card} key={el + '_' + index}>
                                                     <div onClick = {() => getVideoKey(el.id)}>
                                                         <Card key={el + '_' + index}
                                                               id={el.id}

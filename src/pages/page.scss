@@ -2,13 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px;
+
+}
+.movies_conrainer{
+  padding: 100px 0;
+
 }
 .movies_sec {
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
-
+  padding-bottom: 20px;
   .card {
     min-width: 150px;
     margin-left: 20px;
@@ -30,11 +34,18 @@
   }
 }
 .movie_info_sec {
-  padding: 100px;
   .column {
     padding: 20px;
   }
 }
 .movies_row {
   margin: 50px 0;
+}
+.single_sec{
+  margin: 50px;
+  img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
 }

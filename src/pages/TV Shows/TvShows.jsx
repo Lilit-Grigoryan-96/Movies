@@ -6,30 +6,24 @@ import "../page.scss";
 import Page from "../layout/Page";
 import Card from "../../components/Card";
 import {tv} from "../index";
-
+import useData from "../../hooks/useData";
 
 
 const TvShows = () => {
 
-    const [popular, setPopularContent] = useState([]);
-
-    useEffect(() => {
-
-            tv().then(response => setPopularContent(response))
-            console.log()
-        
-    },[]);
+    let data = useData(tv);
 
     return (
         <Page>
-            <Row className="movies">
+            <Row  justify="space-around" className="movies_conrainer movies">
 
                 {
-                    popular && popular.map((el, index) => {
+                    data && data.map((el, index) => {
                         return (
                             <Col md={5} key={el + '_' + index}>
                                 <div className="movies_sec">
                                     <NavLink to={'/tv-show/'+el.id}>
+
                                         <Card
                                               id={el.id}
                                               img={el.img}
@@ -40,7 +34,6 @@ const TvShows = () => {
 
                                     </NavLink>
                                 </div>
-
                             </Col>
                         )
                     })

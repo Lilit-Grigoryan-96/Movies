@@ -24,10 +24,45 @@ header {
 
         li {
           margin-right: 14px;
-
+          color: white;
           a {
             padding: 8px;
             color: white;
+          }
+        }
+        .hav_submenu{
+          position: relative;
+          .submenu{
+            display: none;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px 0;
+            max-height: 312px;
+            min-width: 137px;
+            font-size: 16px;
+            font-stretch: 100%;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 5px;
+            background-color: #fff;
+            z-index: 10;
+            li {
+              margin-right: 0;
+              &:hover{
+                background-color: #f8f9fa;
+              }
+              a{
+                display: inline-block;
+                color: #212529;
+              }
+            }
+          }
+          &:hover{
+            .submenu{
+              display: block;
+            }
           }
         }
       }

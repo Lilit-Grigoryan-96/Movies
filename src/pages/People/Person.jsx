@@ -7,36 +7,28 @@ import Page from "../layout/Page";
 import Card from "../../components/Card";
 import {actor} from "../index"
 import person from "../../assets/images/person-2.svg"
+import useData from "../../hooks/useData";
 
 const Person = () => {
 
-    const [cast, setContent] = useState([]);
-    const [info, setInfo] = useState([]);
     let { id } = useParams();
-
-    useEffect(() => {
-        // fetchFunc()
-        actor(id).then(response => {
-            setInfo(response);
-            setContent(response.credits.cast);
-        })
-    },[]);
+    let data  = useData(actor, id);
 
     return (
         <Page>
             <Row className="movie_info_sec">
                 <Col className="column" md={8}>
-                    <img src={info.profile_path ? 'https://image.tmdb.org/t/p/w500/' + info.profile_path : person}/>
+                    <img src={data.profile_path ? 'https://image.tmdb.org/t/p/w500/' + data.profile_path : person}/>
                 </Col>
                 <Col className="column" md={16}>
-                    <h1>{info.name}</h1>
+                    <h1>{data.name}</h1>
                     <h2>Biography</h2>
                     <p>
-                        {info.biography}
+                        {data.biography}
                     </p>
                     <div className="movies_sec">
                         {
-                            cast.map((el, index) => {
+                           data.credits && data.credits.cast.map((el, index) => {
                                 return (
                                     <NavLink to={'/movie/'+el.id}>
                                         <Card key={el + '_' + index}

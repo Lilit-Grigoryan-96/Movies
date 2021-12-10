@@ -5,27 +5,37 @@ import classes from "./Header.module.scss"
 import {NavLink} from "react-router-dom"
 const Header = () =>{
     return (
-        <header>
+        <header id="header">
             <Row justify="center" className={classes.header_row} >
                 <Col md={22} className={classes.header_menu}  >
                     <NavLink to="/">
                         <img src={logo} className={classes.header_menu_logo} alt="logo"/>
                     </NavLink>
                     <ul className={classes.header_menu_items}>
-                        <li>
-                            <NavLink to="/movies">
-                                Movies
-                            </NavLink>
+                        <li className={classes.hav_submenu}>
+                            Movies
+                            <ul className={classes.submenu}>
+                                <li>
+                                    <NavLink to="/movies">Popular</NavLink>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/tv-shows">
-                                TV Shows
-                            </a>
+                        <li className={classes.hav_submenu}>
+                            TV Shows
+                            <ul className={classes.submenu}>
+                                <li>
+                                    <NavLink to="/tv-shows">Popular</NavLink>
+                                </li>
+                            </ul>
+
                         </li>
-                        <li>
-                            <NavLink to="/people">
-                                People
-                            </NavLink>
+                        <li className={classes.hav_submenu}>
+                            People
+                            <ul className={classes.submenu}>
+                                <li>
+                                    <NavLink to="/people">Popular People</NavLink>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </Col>

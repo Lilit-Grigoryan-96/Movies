@@ -6,59 +6,52 @@ import {Col, Row, Progress} from "antd";
 import "../page.scss";
 import classes from "./TvShow.module.scss"
 import person from "../../assets/images/person-2.svg"
+import noimg from "../../assets/images/noimg.png"
 import Page from "../layout/Page";
 import Card from "../../components/Card";
 import {movieDescription} from "../index"
+import useData from "../../hooks/useData";
 
 const TvShow = () => {
 
-    const [contents, setContent] = useState([]);
-    const [info, setInfo] = useState([]);
-    const [genres, setGenres] = useState([]);
     let { id } = useParams();
+    let data  = useData(movieDescription, id);
 
-    useEffect(() => {
-        movieDescription(id).then(response => {
-            setInfo(response);
-            setContent(response.credits.cast);
-            setGenres(response.genres);
-        });
+    let bgImg=data ? 'https://image.tmdb.org/t/p/w500/'+data.backdrop_path : '';
 
-    });
-    let bgImg=info ? 'https://image.tmdb.org/t/p/w500/'+info.backdrop_path : '';
     return (
         <Page>
             <Row style={{ backgroundImage:  `url(${bgImg})` }} className={classes.movie_info_sec}>
                 <Col  className={classes.column} md={8}>
-                    <img src={info ? 'https://image.tmdb.org/t/p/w500/' + info.poster_path : ''}/>
+                    <img src={data ? 'https://image.tmdb.org/t/p/w500/' + data.poster_path : noimg} alt="movie"/>
                 </Col>
                 <Col className={classes.column} md={16}>
-                    <h1>{info ? info.original_title : ''}</h1>
+                    <h1>{data ? data.original_title : ''}</h1>
                     <p>
-                        {info ? info.release_date : ''}
+                        {data ? data.release_date : ''}
 
                         {
-                            genres.map((el, index) => {
+                            data.genres && data.genres.map((el, index) => {
                                return (<span key={el + '_' + index}> {el.name}, </span>)
                             })
                         }
                     </p>
                     <div className={classes.icons}>
-                           <Progress type="circle" percent={info ? info.vote_average*10 : ''} className="progress"/>
+                           <Progress type="circle" percent={data ? data.vote_average*10 : ''} className="progress"/>
                             <UnorderedListOutlined />
                             <HeartOutlined />
                             <StarOutlined />
                     </div>
 
-                    <h3>{info ? info.tagline : ''}</h3>
+                    <h3>{data ? data.tagline : ''}</h3>
                     <h2>Overview</h2>
-                    <p>{info ? info.overview : ''}</p>
+                    <p>{data ? data.overview : ''}</p>
                 </Col>
             </Row>
             <Row className="movies" >
-                <Col className="movies_sec" >
+                <Col className="movies_sec single_sec" >
                     {
-                        contents && contents.map((el, index) => {
+                        data.credits && data.credits.cast.map((el, index) => {
                             return (
                                 <NavLink to={'/people/' + el.id} className="people_card" key={el + '_' + index}>
                                     <Card

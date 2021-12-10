@@ -49,3 +49,12 @@ h3{
     width: 90px !important;
     height: 90px !important;
 }
+
+.active_btn{
+    background-color: $LightBlue;
+    color: #fff;
+    border-color: $LightBlue;
+}
+.flex-column{
+    flex-direction: column;
+}

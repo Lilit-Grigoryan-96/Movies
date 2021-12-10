@@ -7,9 +7,7 @@ const Footer = () =>{
         <footer>
             <Row justify="center">
                 <Col md={22}>
-                    <a>
-                        <img src={logo} className={classes.footer_logo}/>
-                    </a>
+                    <img src={logo} className={classes.footer_logo} alt="logo"/>
                 </Col>
             </Row>
         </footer>
