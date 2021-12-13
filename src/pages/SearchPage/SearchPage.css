@@ -10,10 +10,16 @@
   border-radius: 8px;
   background-color: #fff;
   margin-bottom: 20px;
+  min-height: 200px;
 }
 .details{
   padding: 10px;
 }
 .search_card img{
-   max-width: 100px;
+   width: 150px;
+   height: 100%;
+   max-width: 150px;
+   object-fit: cover;
+   border-radius: 8px 0 0 8px;
+
  }

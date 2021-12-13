@@ -7,7 +7,7 @@ const useFilter = (func) =>{
 
     useEffect(() => {
         func().then(response => setFilterMovies(response));
-    },[]);
+    },[func]);
 
     return {filterMovies, setFilterMovies};
 

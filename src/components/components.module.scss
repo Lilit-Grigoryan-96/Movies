@@ -1,32 +1,5 @@
 @import "../themes/vars";
 
-//.card{
-//  min-width: 150px;
-// // margin-right: 20px;
-// // height: 100%;
-//  margin-right: 20px;
-//  border: 1px solid #e3e3e3;
-//  border-radius: 8px;
-//  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
-//  img{
-//    min-height: 100%;
-//    border-radius: 8px 8px 0 0;
-//  }
-//  .card_body{
-//    padding: 10px;
-//    color: #000;
-//    h3{
-//      font-weight: 700;
-//      &:hover{
-//        color: $LightBlue
-//      }
-//    }
-//    p{
-//      margin-bottom: 0;
-//    }
-//  }
-//
-//}
 .search_row{
   background-image: url("../assets/images/8bcoRX3hQRHufLPSDREdvr3YMXx.jpg");
   min-height: 300px;
@@ -84,6 +57,7 @@
       top: 0;
       right: -1px;
       color: #fff;
+      cursor: pointer;
     }
   }
 }

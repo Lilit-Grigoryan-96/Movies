@@ -11,31 +11,37 @@ h3{
     font-size: 15px;
 }
 .tabs{
-    .ant-tabs-nav-list{
-        border: 1px solid $DarkBlue;
-        border-radius: 30px;
-        .ant-tabs-tab{
-            padding: 0;
-            margin: 0;
-            .ant-tabs-tab-btn{
-                padding: 4px 20px;
-                color: $DarkBlue;
-                font-weight: bold;
+    .ant-tabs-nav{
+         margin: 20px;
+        .ant-tabs-nav-list{
+            border: 1px solid $DarkBlue;
+            border-radius: 30px;
+            .ant-tabs-tab{
+                padding: 0;
+                margin: 0;
+                .ant-tabs-tab-btn{
+                    padding: 4px 20px;
+                    color: $DarkBlue;
+                    font-weight: bold;
+                }
             }
-        }
-        .ant-tabs-tab-active{
-            .ant-tabs-tab-btn{
-                background-color: $DarkBlue;
-                color: $Green;
-                border-radius: 30px;
+            .ant-tabs-tab-active{
+                .ant-tabs-tab-btn{
+                    background-color: $DarkBlue;
+                    color: $Green;
+                    border-radius: 30px;
+                }
             }
         }
     }
+
     .ant-tabs-ink-bar{
         display: none;
     }
 }
-
+.column_header{
+    margin: 0 20px;
+}
 .d-flex{
     display: flex !important;
 }
@@ -57,4 +63,28 @@ h3{
 }
 .flex-column{
     flex-direction: column;
+}
+.movies_card{
+    .card {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #e3e3e3;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+        img{
+          height: 225px;
+          max-width: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+        }
+        &_body{
+          padding: 10px;
+          color: #000;
+          h3:hover{
+              color: $LightBlue;
+          }
+          
+        }
+      }
 }

@@ -9,7 +9,6 @@ import useHomeFetch from "../../hooks/useHomeFetch";
 const Home = () =>{
 
     const opt = useHomeFetch(streaming, tv, rent, theater, free, nowPlaying, week);
-    console.log(opt);
     return (
         <Page>
             <Search/>

@@ -1,5 +1,4 @@
 import React from 'react'
-import {useEffect, useState} from "react";
 import {useParams, NavLink} from "react-router-dom";
 import {Col, Row} from "antd";
 import "../page.scss";
@@ -18,7 +17,7 @@ const Person = () => {
         <Page>
             <Row className="movie_info_sec">
                 <Col className="column" md={8}>
-                    <img src={data.profile_path ? 'https://image.tmdb.org/t/p/w500/' + data.profile_path : person}/>
+                    <img src={data.profile_path ? 'https://image.tmdb.org/t/p/w500/' + data.profile_path : person} alt='actore'/>
                 </Col>
                 <Col className="column" md={16}>
                     <h1>{data.name}</h1>
@@ -30,8 +29,8 @@ const Person = () => {
                         {
                            data.credits && data.credits.cast.map((el, index) => {
                                 return (
-                                    <NavLink to={'/movie/'+el.id}>
-                                        <Card key={el + '_' + index}
+                                    <NavLink to={'/movie/'+el.id} key={el + '_' + index}>
+                                        <Card
                                             img={el.poster_path? 'https://image.tmdb.org/t/p/w500/' + el.poster_path : person}
                                             title={el.title}
                                         />

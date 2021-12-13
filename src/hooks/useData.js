@@ -7,7 +7,7 @@ const useData = (func,param) =>{
 
     useEffect(() => {
        func(param).then(response => setContent(response));
-    });
+    },[param, func]);
 
     return contents
 };

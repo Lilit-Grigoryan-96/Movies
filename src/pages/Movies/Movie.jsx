@@ -1,5 +1,4 @@
 import React from 'react'
-import {useEffect, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import {UnorderedListOutlined, HeartOutlined, StarOutlined} from "@ant-design/icons"
 import {Col, Row, Progress} from "antd";
@@ -19,11 +18,12 @@ const Movie = () => {
     let data  = useData(movieDescription, id);
 
     let bgImg=data ? 'https://image.tmdb.org/t/p/w500/'+data.backdrop_path : noimg;
+    
     return (
         <Page>
             <Row style={{ backgroundImage:  `url(${bgImg})` }} className={classes.movie_info_sec}>
                 <Col  className={classes.column} md={8}>
-                    <img src={data.poster_path ? 'https://image.tmdb.org/t/p/w500/' + data.poster_path : noimg}/>
+                    <img src={data.poster_path ? 'https://image.tmdb.org/t/p/w500/' + data.poster_path : noimg} alt='poster'/>
                 </Col>
                 <Col className={classes.column} md={16}>
                     <h1>{data.original_title}</h1>

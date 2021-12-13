@@ -1,3 +1,5 @@
+@import "../themes/vars";
+
 .movies {
   display: flex;
   flex-wrap: wrap;
@@ -16,14 +18,24 @@
   .card {
     margin-left: 20px;
     width: 150px;
+    height: 100%;
     border: 1px solid #e3e3e3;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+
     img{
       height: 225px;
       max-width: 150px;
       object-fit: cover;
       border-radius: 8px 8px 0 0;
+    }
+    &_body{
+      padding: 10px;
+      color: #000;
+      h3:hover{
+          color: $LightBlue;
+      }
+      
     }
   }
   &::-webkit-scrollbar {

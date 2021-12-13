@@ -1,5 +1,4 @@
 import React from 'react'
-import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import {Col, Row} from "antd";
 import "../page.scss";
@@ -21,7 +20,7 @@ const TvShows = () => {
                     data && data.map((el, index) => {
                         return (
                             <Col md={5} key={el + '_' + index}>
-                                <div className="movies_sec">
+                                <div className="movies_card">
                                     <NavLink to={'/tv-show/'+el.id}>
 
                                         <Card

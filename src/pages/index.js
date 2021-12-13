@@ -18,7 +18,7 @@ export const streaming = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                      id:el.id,
-                     img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                     img:el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                      title:el.original_title ? el.original_title : el.original_name,
                      date:el.release_date ? el.release_date : el.first_air_date,
                      vote:el.vote_average
@@ -33,7 +33,7 @@ export const tv = async () =>{
                 .then(response =>{
                     return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img:el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -46,7 +46,7 @@ export const rent = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img: el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -61,7 +61,7 @@ export const theater = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img: el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -74,7 +74,7 @@ export const free = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img:el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -89,7 +89,7 @@ export const nowPlaying = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img: el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -105,7 +105,7 @@ export const week = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img: el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average
@@ -120,7 +120,7 @@ export const popularMovies = async () =>{
         .then(response => {
             return response.data.results.map((el, index)=>({
                             id:el.id,
-                            img:'https://image.tmdb.org/t/p/w500/'+el.poster_path,
+                            img: el.poster_path ? 'https://image.tmdb.org/t/p/w500/'+el.poster_path : noimg,
                             title:el.original_title ? el.original_title : el.original_name,
                             date:el.release_date ? el.release_date : el.first_air_date,
                             vote:el.vote_average

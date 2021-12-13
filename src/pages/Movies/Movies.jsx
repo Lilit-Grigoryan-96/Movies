@@ -1,5 +1,4 @@
 import React from 'react'
-import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import {Col, Row} from "antd";
 import "../page.scss";
@@ -8,6 +7,7 @@ import Card from "../../components/Card";
 import {fetchMovieByFilter} from "../index";
 import Filters from '../../components/Filters';
 import useFilter from "../../hooks/useFilter";
+
 const Movies = () => {
 
    const {filterMovies, setFilterMovies} = useFilter(fetchMovieByFilter);
@@ -24,7 +24,7 @@ const Movies = () => {
                             filterMovies && filterMovies.map((el, index) => {
                                 return (
                                     <Col md={5} key={el + '_' + index}>
-                                        <div className="movies_sec">
+                                        <div className="movies_card">
                                             <NavLink to={'/movie/'+el.id}>
                                                 <Card
                                                     id={el.id}

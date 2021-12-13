@@ -18,7 +18,7 @@ const useHomeFetch = (streaming, tv, rent, theater, free, nowPlaying, week) =>{
         free().then(response => setFreeContent(response));
         nowPlaying().then(response => setNowPlayingContent(response));
         week().then(response => setWeekContent(response));
-    },[]);
+    },[streaming, tv, rent, theater, free, nowPlaying, week]);
 
     return [
         {

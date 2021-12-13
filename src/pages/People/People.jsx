@@ -1,7 +1,7 @@
 import React from 'react'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {NavLink} from "react-router-dom";
-import {Col, Row, Pagination} from "antd";
+import {Col, Row} from "antd";
 import "../page.scss";
 import Page from "../layout/Page";
 import Card from "../../components/Card";
@@ -17,7 +17,6 @@ const People = () => {
 
     const [currentPage, setPage] = useState(1);
     let data = useData(people, currentPage);
-
     
     return (
         
@@ -28,20 +27,20 @@ const People = () => {
                     {
                        
                         data && data.map((el, index) => {
-                                return (
-                                    <Col md={5} key={el + '_' + index} className={classes.card}>
-                                        <div>
-                                            <NavLink to={'/people/' + el.id}>
-                                                <Card
-                                                      id={index}
-                                                      img={el.profile_path ? 'https://image.tmdb.org/t/p/w500/' + el.profile_path: personImg}
-                                                      title={el.name}
-                                                />
-                                            </NavLink>
-                                        </div>
-                                    </Col>
-                                )
-                            })
+                            return (
+                                <Col md={5} key={el + '_' + index} className={classes.card}>
+                                    <div className="movies_card">
+                                        <NavLink to={'/people/' + el.id}>
+                                            <Card
+                                                    id={index}
+                                                    img={el.profile_path ? 'https://image.tmdb.org/t/p/w500/' + el.profile_path: personImg}
+                                                    title={el.name}
+                                            />
+                                        </NavLink>
+                                    </div>
+                                </Col>
+                            )
+                        })
                     }
 
             </Row>

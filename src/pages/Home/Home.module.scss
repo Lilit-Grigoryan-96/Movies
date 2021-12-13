@@ -23,17 +23,21 @@
 
 .video_card {
   position: relative;
-  .play{
-    position: absolute;
-    top: 84px;
-    left: 51px;
-    svg{
-      height: 50px;
-      width: 50px;
-      color: #fff;
-      cursor: pointer;
+  &_container{
+    height: 100%;
+    .play{
+      position: absolute;
+      top: 84px;
+      left: 72px;
+      svg{
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        cursor: pointer;
+      }
     }
   }
+  
   //.card {
   //  min-width: 300px;
   //  .card_head {

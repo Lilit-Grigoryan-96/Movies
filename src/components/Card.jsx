@@ -1,20 +1,14 @@
 import React from 'react'
-import classes from "./components.module.scss";
-
-
 
 function Card({img, title, date, vote, id, character}) {
 
     return (
 
         <div className="card" id={id}>
-            <div className={classes.card_head}>
-                    <a className="image">
-                        <img loading="lazy" className="poster"
-                             src={img} alt=""/>
-                    </a>
+            <div className="card_head">
+                <img loading="lazy" className="poster" src={img} alt=""/>
             </div>
-            <div className={classes.card_body}>
+            <div className="card_body">
                 <h3>{title}</h3>
                 <p>{date}</p>
                 <span>{vote}</span>

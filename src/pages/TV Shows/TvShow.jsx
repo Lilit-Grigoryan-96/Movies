@@ -1,5 +1,4 @@
 import React from 'react'
-import {useEffect, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import {UnorderedListOutlined, HeartOutlined, StarOutlined} from "@ant-design/icons"
 import {Col, Row, Progress} from "antd";
@@ -16,7 +15,6 @@ const TvShow = () => {
 
     let { id } = useParams();
     let data  = useData(movieDescription, id);
-
     let bgImg=data ? 'https://image.tmdb.org/t/p/w500/'+data.backdrop_path : '';
 
     return (
@@ -57,7 +55,6 @@ const TvShow = () => {
                                     <Card
                                           img={el.profile_path ? 'https://image.tmdb.org/t/p/w500/' + el.profile_path: person}
                                           title={el.original_name}
-                                          character={el.character}
                                     />
                                </NavLink>
                             )
