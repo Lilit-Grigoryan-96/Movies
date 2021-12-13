@@ -8,7 +8,7 @@ import useData from "../hooks/useData";
 
 const { RangePicker } = DatePicker;
 
-const Filters = ({setFilterMovies}) => {
+const Filters = ({setFilterMovies, movieUrl}) => {
 
     const [searchChecked, setSearchChecked] =useState(true);
     const certification = ['NR', 'G', 'PG', 'PG-13', 'R', 'NC-17'];
@@ -77,7 +77,7 @@ const Filters = ({setFilterMovies}) => {
             } );
         }
 
-        setFilterMovies(await fetchMovieByFilter(genreArg.join(','), checkedArr.join(','),
+        setFilterMovies(await fetchMovieByFilter(movieUrl, genreArg.join(','), checkedArr.join(','),
             dateArg[0], dateArg[1], certificationArg.join(','),userScoreVal[0],userScoreVal[1],language,
             runtimeArg[0], runtimeArg[1]));
             setgenreArg([]);

@@ -16,7 +16,7 @@ const Movie = () => {
 
     let { id } = useParams();
     let data  = useData(movieDescription, id);
-
+    let className= data.vote_average > 7 ? 'bg-green' : 'bg-yellow';
     let bgImg=data ? 'https://image.tmdb.org/t/p/w500/'+data.backdrop_path : noimg;
     
     return (
@@ -37,7 +37,7 @@ const Movie = () => {
                         }
                     </p>
                     <div className={classes.icons}>
-                           <Progress type="circle" percent={data.vote_average*10} className="progress"/>
+                           <Progress type="circle" percent={data.vote_average*10} className={`progress ${className}`}/>
                             <UnorderedListOutlined />
                             <HeartOutlined />
                             <StarOutlined />

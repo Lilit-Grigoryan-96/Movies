@@ -8,15 +8,16 @@ import {fetchMovieByFilter} from "../index";
 import Filters from '../../components/Filters';
 import useFilter from "../../hooks/useFilter";
 
-const Movies = () => {
 
-   const {filterMovies, setFilterMovies} = useFilter(fetchMovieByFilter);
+const Movies = () => {
+    const movieUrl = `https://api.themoviedb.org/3/movie/popular?api_key=84b4ae21e6430ff5a2eea4866300ebf8`;
+    const {filterMovies, setFilterMovies} = useFilter(fetchMovieByFilter, movieUrl);
 
     return (
         <Page>
             <Row justify="space-around" className="movies_conrainer">
                 <Col lg={6}>
-                    <Filters setFilterMovies={setFilterMovies}/>
+                    <Filters setFilterMovies={setFilterMovies} movieUrl={movieUrl}/>
                 </Col>
                 <Col lg={16}>
                     <Row className="movies">

@@ -6,38 +6,46 @@ import Page from "../layout/Page";
 import Card from "../../components/Card";
 import {tv} from "../index";
 import useData from "../../hooks/useData";
-
+import {fetchMovieByFilter} from "../index";
+import Filters from '../../components/Filters';
+import useFilter from "../../hooks/useFilter";
 
 const TvShows = () => {
 
-    let data = useData(tv);
+    const movieUrl = 'https://api.themoviedb.org/3/tv/on_the_air?sort_by=popularity.desc&api_key=84b4ae21e6430ff5a2eea4866300ebf8';
+    const { filterMovies, setFilterMovies} = useFilter(fetchMovieByFilter, movieUrl);
 
     return (
         <Page>
-            <Row  justify="space-around" className="movies_conrainer movies">
+            <Row  justify="space-around" className="movies_conrainer">
+                <Col lg={6}>
+                    <Filters setFilterMovies={setFilterMovies} movieUrl={movieUrl}/>
+                </Col>
+                <Col lg={16}>
+                    <Row className="movies">
+                    {
+                        filterMovies && filterMovies.map((el, index) => {
+                            return (
+                                <Col md={5} key={el + '_' + index}>
+                                    <div className="movies_card">
+                                        <NavLink to={'/tv-show/'+el.id}>
 
-                {
-                    data && data.map((el, index) => {
-                        return (
-                            <Col md={5} key={el + '_' + index}>
-                                <div className="movies_card">
-                                    <NavLink to={'/tv-show/'+el.id}>
+                                            <Card
+                                                id={el.id}
+                                                img={el.img}
+                                                title={el.title}
+                                                date={el.date}
+                                                vote={el.vote}
+                                            />
 
-                                        <Card
-                                              id={el.id}
-                                              img={el.img}
-                                              title={el.title}
-                                              date={el.date}
-                                              vote={el.vote}
-                                        />
-
-                                    </NavLink>
-                                </div>
-                            </Col>
-                        )
-                    })
-                }
-
+                                        </NavLink>
+                                    </div>
+                                </Col>
+                            )
+                        })
+                    }
+                    </Row>
+                </Col>
             </Row>
         </Page>
     )

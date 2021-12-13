@@ -6,6 +6,7 @@ import Page from "../layout/Page";
 import Card from "../../components/Card";
 import {actor} from "../index"
 import person from "../../assets/images/person-2.svg"
+import noimg from "../../assets/images/noimg.png"
 import useData from "../../hooks/useData";
 
 const Person = () => {
@@ -31,7 +32,7 @@ const Person = () => {
                                 return (
                                     <NavLink to={'/movie/'+el.id} key={el + '_' + index}>
                                         <Card
-                                            img={el.poster_path? 'https://image.tmdb.org/t/p/w500/' + el.poster_path : person}
+                                            img={el.poster_path? 'https://image.tmdb.org/t/p/w500/' + el.poster_path : noimg}
                                             title={el.title}
                                         />
                                     </NavLink>

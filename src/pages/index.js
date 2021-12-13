@@ -10,7 +10,7 @@ const FREE_API = URL + 'discover/movie?'+KEY+'&watch_region=US&with_watch_moneti
 const NOWPLAYING_API = 'https://api.themoviedb.org/3/trending/movie/day?'+KEY;
 const WEEK_API = 'https://api.themoviedb.org/3/trending/movie/week?'+KEY;
 const POPULAR = URL + 'movie/popular?'+KEY;
-const movieUrl = `https://api.themoviedb.org/3/movie/popular?api_key=84b4ae21e6430ff5a2eea4866300ebf8`;
+
 
 export const streaming = async () =>{
 
@@ -176,7 +176,7 @@ export const genres = async () =>{
         .catch(error => console.log('Error', error))
 };
 
-export const fetchMovieByFilter = async (genre_id, rent, gte, lte, certificationArg, userScoreValMin, userScoreValMax, language,
+export const fetchMovieByFilter = async (movieUrl, genre_id, rent, gte, lte, certificationArg, userScoreValMin, userScoreValMax, language,
                                         runtimeArgMin, runtimeArgMax) => {
 
     return axios.get(movieUrl, { params: {with_genres: genre_id , watch_region:'US',
