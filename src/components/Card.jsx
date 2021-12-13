@@ -7,7 +7,7 @@ function Card({img, title, date, vote, id, character}) {
 
     return (
 
-        <div className={classes.card} id={id}>
+        <div className="card" id={id}>
             <div className={classes.card_head}>
                     <a className="image">
                         <img loading="lazy" className="poster"

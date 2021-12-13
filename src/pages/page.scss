@@ -14,8 +14,17 @@
   overflow-x: scroll;
   padding-bottom: 20px;
   .card {
-    min-width: 150px;
     margin-left: 20px;
+    width: 150px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+    img{
+      height: 225px;
+      max-width: 150px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
   }
   &::-webkit-scrollbar {
     width: 12px;

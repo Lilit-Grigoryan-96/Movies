@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import Page from "../layout/Page";
 import Search from "../../components/Search"
 import MoviesSection from "./components/MoviesSection";
@@ -9,6 +9,7 @@ import useHomeFetch from "../../hooks/useHomeFetch";
 const Home = () =>{
 
     const opt = useHomeFetch(streaming, tv, rent, theater, free, nowPlaying, week);
+    console.log(opt);
     return (
         <Page>
             <Search/>

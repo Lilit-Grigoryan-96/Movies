@@ -11,18 +11,14 @@ const useHomeFetch = (streaming, tv, rent, theater, free, nowPlaying, week) =>{
 
 
     useEffect(() => {
-        const fetchApi = async () => {
-            setStreamingContent(await streaming());
-            setTvContent(await tv());
-            setRentContent(await rent());
-            setTheaterContent(await theater());
-            setFreeContent(await free());
-            setNowPlayingContent(await nowPlaying());
-            setWeekContent(await week())
-        };
-        fetchApi();
-
-    });
+        streaming().then(response => setStreamingContent(response));
+        tv().then(response => setTvContent(response));
+        rent().then(response => setRentContent(response));
+        theater().then(response => setTheaterContent(response));
+        free().then(response => setFreeContent(response));
+        nowPlaying().then(response => setNowPlayingContent(response));
+        week().then(response => setWeekContent(response));
+    },[]);
 
     return [
         {

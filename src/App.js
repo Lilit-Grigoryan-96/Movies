@@ -1,7 +1,7 @@
+import {BrowserRouter, BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.scss';
 import Movies from "./pages/Movies/Movies"
 import Home from "./pages/Home/Home"
-import {BrowserRouter, BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import People from "./pages/People/People";
 import Movie from "./pages/Movies/Movie";
 import Person from "./pages/People/Person";

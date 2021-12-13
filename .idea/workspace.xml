@@ -2,50 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="009ba77d-58da-42c6-88f2-387a294d54dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/movie.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/person-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/person-2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/person.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/person.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/play.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/play.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/components.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/components.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHomeFetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHomeFetch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/components/MoviesSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/components/MoviesSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Movies/Movie.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Movies/Movie.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Movies/Movies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Movies/Movies.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Movies/Movies.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Movies/Movies.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/People/People.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/People/People.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/People/People.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/People/People.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/People/Person.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/People/Person.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SearchPage/SearchPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchPage/SearchPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SearchPage/SearchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchPage/SearchPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/TV Shows/TvShow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TV Shows/TvShow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/TV Shows/TvShow.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TV Shows/TvShow.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/TV Shows/TvShows.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TV Shows/TvShows.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/layout/Page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/layout/Page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/useFetch.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/vars.scss" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,11 +33,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="009ba77d-58da-42c6-88f2-387a294d54dd" name="Changes" comment="" />
@@ -79,10 +63,26 @@
       <updated>1639124150503</updated>
       <workItem from="1639124153519" duration="2431000" />
       <workItem from="1639127483951" duration="302000" />
+      <workItem from="1639171809029" duration="3282000" />
+      <workItem from="1639303152646" duration="4127000" />
+      <workItem from="1639369868427" duration="464000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
